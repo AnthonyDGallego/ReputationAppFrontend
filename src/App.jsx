@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import HomeLayout from "./layouts/HomeLayout";
+import Home from "./pages/Home/Home.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <div>
-          AD
-      </div>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomeLayout/>}>
+            <Route path="/" element={<Home/>}/>
+            </Route>
+          </Routes>
+      </BrowserRouter>
   )
 }
 
