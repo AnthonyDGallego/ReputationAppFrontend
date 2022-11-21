@@ -3,15 +3,19 @@ import HomeLayout from "./layouts/HomeLayout";
 import Home from "./pages/Home/Home.jsx";
 
 function App() {
-  return (
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomeLayout/>}>
-            <Route path="/" element={<Home/>}/>
-            </Route>
-          </Routes>
-      </BrowserRouter>
-  )
+    return (
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<HomeLayout/>}>
+                        <Route index element={<Home/>}/>
+                    </Route>
+
+                </Routes>
+            </BrowserRouter>
+        </div>
+
+    )
 }
 
 export default App
